@@ -1,3 +1,4 @@
 node_modules
 cypress/*
 !cypress/integration
+result.txt
