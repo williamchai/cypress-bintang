@@ -16,4 +16,4 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v2
         with:
-          build: npx cypress run --quiet --browser chrome --reporter tap|tee result.txt
+          build: npx cypress run --quiet --browser chrome --reporter tap |tee result.txt
