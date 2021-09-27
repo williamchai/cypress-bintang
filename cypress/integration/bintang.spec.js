@@ -34,8 +34,8 @@ describe('bintang booking', () => {
   // San Carlos Court 3 available on day 28, 7pm
   // check(3, 28, 7)
 
-  // check all courts
-  allCourts.forEach(i => {
+  // check courts
+  [3,4,5].forEach(i => {
     check(i, nextTuesday, 7);
   });
   
