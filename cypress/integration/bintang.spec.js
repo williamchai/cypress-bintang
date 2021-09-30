@@ -2,7 +2,8 @@
 
 const allCourts = [...Array(8).keys()].slice(1);
 const d = new Date();
-const nextTuesday = d.getDate() + ((7-d.getDay())%7+2) % 7;
+d.setDate(d.getDate() + ((7-d.getDay())%7+2) % 7);
+const nextTuesday = d.getDate();
 
 function check(court, day, hour) {
     it(`San Carlos Court ${court} available on date ${day}`, () => {
@@ -35,7 +36,7 @@ describe('bintang booking', () => {
   // check(3, 28, 7)
 
   // check courts
-  [3,4,5].forEach(i => {
+  allCourts.forEach(i => {
     check(i, nextTuesday, 7);
   });
   
